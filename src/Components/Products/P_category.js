@@ -25,7 +25,7 @@ const P_category = () => {
 
                 <div class="flex justify-center w-full hover:scale-105 duration-1000'">
                     <div class="rounded-lg shadow-xl  shadow-2xl  bg-white  h-48 ">
-                        <Link to='Category'>
+                        <Link to='/All_product'>
                             <div class="flex justify-center w-100 mt-5 w-40 md:w-44 xl:w-48 lg:w-48 ">
 
                                 <img class="rounded-t-md w-30 h-24 text-center flex" src={energy} alt="" />

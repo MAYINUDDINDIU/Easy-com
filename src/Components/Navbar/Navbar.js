@@ -12,8 +12,9 @@ import office from '../../Assets/Icons/stationery.png';
 import kitchen from '../../Assets/Icons/kitchen.png';
 import car from '../../Assets/Icons/hybrid-car.png';
 import { Link, NavLink } from 'react-router-dom';
-import { BsFillCartFill } from "react-icons/bs";
+import { BsFillCartPlusFill } from "react-icons/bs";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+
 
 const Navbar = () => {
     return (
@@ -55,9 +56,12 @@ const Navbar = () => {
                         </div>
                         <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
                             <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
-                                <li class="nav-item text-lg">
-                                    <a class="nav-link block pr-2 lg:px-2 py-2 text-white hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out flex items-center" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">HOME</a>
-                                </li>
+                                <NavLink to='/'>
+                                    <li class="nav-item text-lg">
+                                        <a class="nav-link font-bold block pr-2 lg:px-2 py-2 text-white hover:text-white focus:text-white transition duration-150 ease-in-out flex items-center" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">HOME</a>
+                                    </li>
+                                </NavLink>
+
                                 <li class="nav-item dropdown static text-white text-lg  lg:mx-5">
                                     <a class="nav-link block pr-2 lg:px-2 py-2 text-white hover:text-white  focus:text-white  transition duration-300 ease-in-out dropdown-toggle flex items-center whitespace-nowrap"
                                         href="#" data-mdb-ripple="true" data-mdb-ripple-color="light" type="button" id="dropdownMenuButtonX"
@@ -248,16 +252,128 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </li>
+                                <NavLink to='/All_product'>
+                                    <li class="nav-item text-lg mb-2  lg:mb-0">
+                                        <a class="nav-link block pr-2 lg:px-2 py-2 text-white  hover:text-white focus:text-white transition duration-50 ease-in-out flex items-center" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">About us</a>
+                                    </li>
+                                </NavLink>
 
-                                <li class="nav-item mb-2 lg:mb-0">
-                                    <a class="nav-link block pr-2 lg:px-2 py-2 text-white  hover:text-white focus:text-white transition duration-50 ease-in-out flex items-center" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">About us</a>
-                                </li>
                             </ul>
                         </div>
-                        {/* <div class="flex items-center lg:ml-auto">
-                            <button type="button" class="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Login</button>
-                            <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Sign up for free</button>
-                        </div> */}
+                        <div class="flex mr-12 items-center lg:ml-auto">
+
+                            <li className='list-none text-2xl'><BsFillCartPlusFill /></li>
+                            <div class="flex justify-center">
+                                <div>
+                                    <div class="dropdown relative mt-1">
+                                        <button
+                                            class="
+                                                dropdown-toggle
+                                                px-6
+                                                py-2.5
+                                                text-white
+                                                font-medium
+                                                text-2xl
+                                                leang-tight
+                                                uppercase
+                                                rounded
+                                              active:text-white
+                                                transition
+                                                duration-150
+                                                ease-in-out
+                                                flex
+                                                items-center
+                                                whitespace-nowrap
+                                                "
+                                            type="button"
+                                            id="dropdownMenuButton1d"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <BsFillPersonLinesFill />
+                                            <svg
+                                                aria-hidden="true"
+                                                focusable="false"
+                                                data-prefix="fas"
+                                                data-icon="caret-down"
+                                                class="w-2 ml-2"
+                                                role="img"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 320 512"
+                                            >
+
+                                            </svg>
+                                        </button>
+                                        <ul
+                                            class="
+                                            dropdown-menu
+                                            min-w-max
+                                            absolute
+                                            hidden
+                                            bg-white
+                                            text-base
+                                            z-50
+                                            float-left
+                                            py-2
+                                            list-none
+                                            text-left
+                                            rounded
+                                            shadow-lg
+                                            mt-1
+                                            hidden
+                                            m-0
+                                            bg-clip-padding
+                                            border-none
+                                            "
+                                            aria-labelledby="dropdownMenuButton1d"
+                                        >
+                                            <NavLink to='login'>
+                                                <li>
+                                                    <a class="
+                                                dropdown-item
+                                                text-sm
+                                                py-2
+                                                px-12
+                                                font-normal
+                                                block
+                                                w-full
+                                                whitespace-nowrap
+                                                bg-transparent
+                                                text-gray-700
+                                                hover:bg-gray-100
+                                                "
+                                                        href="#"
+                                                    >Login</a>
+                                                </li>
+                                            </NavLink>
+
+                                            <li>
+                                                <a class="dropdown-item
+                                                            text-sm
+                                                            py-2
+                                                            px-12
+                                                            font-normal
+                                                            block
+                                                            w-full
+                                                            whitespace-nowrap
+                                                            bg-transparent
+                                                            text-gray-700
+                                                            hover:bg-gray-100
+                                                            "href="#"
+                                                >Sign up</a
+                                                >
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
                     </div>
                 </nav>
 
