@@ -1,13 +1,18 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 import product from '../../Assets/Slider/slider1.jpg'
-const All_products = () => {
+import { Link } from 'react-router-dom';
+const All_products = ({ test }) => {
+
+    console.log(test)
+
     return (
-        <div className='lg:px-12 lg:py-12 px-2'>
+        <div className='lg:px-12 lg:py-6 px-2'>
 
-            <div className='grid lg:grid-cols-4 gap-2'>
+            <h2 className='text-2xl mb-5'>All Products</h2>
+            <div className='grid grid-cols-2 lg:grid-cols-4 gap-4'>
 
-                <div>
+                <div className='hover:scale-105 duration-1000'>
                     <Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -16,22 +21,22 @@ const All_products = () => {
                             image={product}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Lizard
+                            <Typography gutterBottom variant="h6" component="div">
+                                Formula & Energy Boosters
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                <p>Price: 500$</p>
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
+                        <div className='mb-5'>
+                            <Button className='text-center' color="success" size="small" variant="contained">Add to cart</Button>
+                            <Button style={{ marginLeft: '10px' }} className='text-center' size="small" variant="outlined">details</Button>
+                        </div>
+
                     </Card>
                 </div>
 
-                <div>
+                <div className='hover:scale-105 duration-1000'>
                     <Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -40,22 +45,43 @@ const All_products = () => {
                             image={product}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Lizard
+                            <Typography gutterBottom variant="h6" component="div">
+                                Formula & Energy Boosters
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                <p>Price: 500$</p>
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
+                        <div className='mb-5'>
+                            <Button className='text-center' color="success" size="small" variant="contained">Add to cart</Button>
+                            <Button style={{ marginLeft: '10px' }} className='text-center' size="small" variant="outlined">details</Button>
+                        </div>
+                    </Card>
+                </div>
+                <div className='hover:scale-105 duration-1000'>
+                    <Card sx={{ maxWidth: 345 }}>
+                        <CardMedia
+                            component="img"
+                            alt="green iguana"
+                            height="140"
+                            image={product}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="div">
+                                Formula & Energy Boosters
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                <p>Price: 500$</p>
+                            </Typography>
+                        </CardContent>
+                        <div className='mb-5'>
+                            <Button className='text-center' color="success" size="small" variant="contained">Add to cart</Button>
+                            <Button style={{ marginLeft: '10px' }} className='text-center' size="small" variant="outlined">details</Button>
+                        </div>
                     </Card>
                 </div>
 
-                <div>
+                <div className='hover:scale-105 duration-1000'>
                     <Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -64,45 +90,25 @@ const All_products = () => {
                             image={product}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Lizard
+                            <Typography gutterBottom variant="h6" component="div">
+                                Formula & Energy Boosters
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                <p>Price: 500$</p>
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
-                    </Card>
-                </div>
+                        <div className='mb-5'>
+                            <Button className='text-center' color="success" size="small" variant="contained">Add to cart</Button>
+                            <Link to='/Product_details'>
+                                <Button style={{ marginLeft: '10px' }} className='text-center' size="small" variant="outlined">details</Button>
 
-                <div>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardMedia
-                            component="img"
-                            alt="green iguana"
-                            height="140"
-                            image={product}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
+                            </Link>
+                        </div>
                     </Card>
                 </div>
             </div>
+
+
         </div>
     );
 };
