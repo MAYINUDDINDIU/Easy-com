@@ -52,7 +52,9 @@ const Navbar = () => {
                                 </svg>
 
                             </button>
-                            <li class="nav-item shadow-blue-600/50 static mr-0 lg:mr-20 ml-5 text-white list-none font-bold lg:text-2xl" >EASY<span className='text-[#ffc107] shadow-blue-600/50'>BAZAR</span> </li>
+                            <NavLink to='/'>
+                                <li class="nav-item shadow-blue-600/50 static mr-0 lg:mr-20 ml-5 text-white list-none font-bold lg:text-2xl" >SANGHU<span className='text-[#ffc107] shadow-blue-600/50'>BAZAR</span> </li>
+                            </NavLink>
                         </div>
                         <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
                             <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
