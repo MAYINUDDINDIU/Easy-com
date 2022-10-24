@@ -348,9 +348,9 @@ const Navbar = () => {
                                                     >Login</a>
                                                 </li>
                                             </NavLink>
-
-                                            <li>
-                                                <a class="dropdown-item
+                                            <NavLink to='signup'>
+                                                <li>
+                                                    <a class="dropdown-item
                                                             text-sm
                                                             py-2
                                                             px-12
@@ -362,9 +362,10 @@ const Navbar = () => {
                                                             text-gray-700
                                                             hover:bg-gray-100
                                                             "href="#"
-                                                >Sign up</a
-                                                >
-                                            </li>
+                                                    >Sign up</a
+                                                    >
+                                                </li>
+                                            </NavLink>
 
 
                                         </ul>

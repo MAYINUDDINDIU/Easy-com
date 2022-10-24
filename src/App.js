@@ -8,6 +8,7 @@ import P_category from './Components/Products/P_category';
 import Login from './Components/Login/Login';
 import All_products from './Components/Products/All_products';
 import P_details from './Components/Products/P_details';
+import Signup from './Components/Login/Signup';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='Category' element={<P_category />}>Category</Route>
         <Route path='/All_product' element={<All_products />}>All_product</Route>
         <Route path='login' element={<Login />}>Login</Route>
+        <Route path='signup' element={<Signup />}>Signup</Route>
         <Route path='/Product_details' element={<P_details />}>Details</Route>
       </Routes>
       <Footer></Footer>
