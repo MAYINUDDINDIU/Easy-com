@@ -1,6 +1,6 @@
 import React from 'react';
 import login from '../../Assets/Icons/login.jpg';
-
+import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <div className='lg:px-48'>
@@ -121,11 +121,10 @@ const Login = () => {
                                     </button>
                                     <p class="text-sm font-semibold mt-2 pt-1 mb-0">
                                         Don't have an account?
-                                        <a
+                                        <Link to='/signup'
                                             href="#!"
                                             class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
-                                        >Register</a
-                                        >
+                                        >Register</Link>
                                     </p>
                                 </div>
                             </form>
